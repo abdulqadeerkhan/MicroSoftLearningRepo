@@ -1,6 +1,7 @@
 name: "Hello Actions"
 description: "Greet someone"
 author: "octocat@github.com"
+on:push
 
 inputs:
     MY_NAME:
