@@ -2,8 +2,9 @@ name: "Hello Actions"
 description: "Greet someone"
 author: "octocat@github.com"
 on:
-  push: 
-    - main
+  push:
+    branches:
+      - main  # Correctly specify the branch under 'branches'
 
 inputs:
   MY_NAME:
@@ -12,7 +13,7 @@ inputs:
     default: "World"
 
 runs:
-  using: "docker" # Corrected from 'uses' to 'using'
+  using: "docker" # Correct usage for Docker actions
   image: "Dockerfile" # Ensure Dockerfile is in the correct location
 
 branding:
