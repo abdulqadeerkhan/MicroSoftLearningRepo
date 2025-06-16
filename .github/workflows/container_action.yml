@@ -1,18 +1,20 @@
 name: "Hello Actions"
 description: "Greet someone"
 author: "octocat@github.com"
-on:push
+on:
+  push: 
+    - main
 
 inputs:
-    MY_NAME:
-      description: "Who to greet"
-      required: true
-      default: "World"
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "World"
 
 runs:
-    uses: "docker"
-    image: "Dockerfile"
+  using: "docker" # Corrected from 'uses' to 'using'
+  image: "Dockerfile" # Ensure Dockerfile is in the correct location
 
 branding:
-    icon: "mic"
-    color: "purple"
+  icon: "mic"
+  color: "purple"
