@@ -4,7 +4,14 @@ author: "octocat@github.com"
 on:
   push:
     branches:
-      - main  # Correctly specify the branch under 'branches'
+      - main
+
+jobs:
+  greet:  # Define a job named 'greet'
+    runs-on: ubuntu-latest  # Specify the environment to run the job
+    steps:
+      - name: Run Docker Action
+        uses: .  # Use the action defined in the current repository
 
 inputs:
   MY_NAME:
@@ -13,8 +20,8 @@ inputs:
     default: "World"
 
 runs:
-  using: "docker" # Correct usage for Docker actions
-  image: "Dockerfile" # Ensure Dockerfile is in the correct location
+  using: "docker"
+  image: "Dockerfile"
 
 branding:
   icon: "mic"
