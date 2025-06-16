@@ -1,0 +1,17 @@
+name: "Calling Meta Data Action"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  callingaction:  # Ensure this is properly indented
+    runs-on: ubuntu-latest  # Correct indentation level
+
+    steps:
+      - name: "Step 1"
+        uses: ./my-action  # Reference the action defined in the my-action directory
+        with:
+          My_Name: "Abdul Qadeer"  # Ensure the input name matches the action's input definition
+  
