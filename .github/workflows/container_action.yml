@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest  # Specify the environment to run the job
     steps:
       - name: Run Docker Action
-        uses: .  # Use the action defined in the current repository
+        uses: ./  # Use the action defined in the current repository
 
 inputs:
   MY_NAME:
