@@ -1,12 +1,11 @@
-name: "Hello Actions"
-on:
-  push:
-    branches:
-      - main
-
+name: A workflow for my Hello World file
+on: push
 jobs:
-  greet:  # Define a job named 'greet'
-    runs-on: ubuntu-latest  # Specify the environment to run the job
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
     steps:
-      - name: Run Docker Action
-        uses: ./  # Use the action defined in the current repository
+    - uses: actions/checkout@v1
+    - uses: ./my-actions
+      with:
+        MY_NAME: "Mona"
