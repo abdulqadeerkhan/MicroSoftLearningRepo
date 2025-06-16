@@ -1,0 +1,17 @@
+name: "Meta data Action File"
+description: "Display the action file author's name"
+author: "imabdulqadeer@gmail.com"
+
+inputs:  
+  authorname:
+    description: "Name of action's author"
+    required: true
+    default: "github"
+
+runs:
+  uses: "docker"  
+  image: "dockerfileimagepath"  # Added spaces after colons for formatting
+
+branding:
+  icon: "mic"  # Added spaces after colons for formatting
+  color: "purple"  # Added spaces after colons for formatting
