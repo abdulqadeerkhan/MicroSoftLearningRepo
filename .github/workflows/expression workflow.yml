@@ -6,10 +6,10 @@ jobs:
   checkexpression:
     runs-on: ubuntu-latest
     steps:
-      - name: "Check Expressions"
+      - name: "Check Event Type"
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then
-            echo "${{ github.event.action }}"
+            echo "This is a push event"
           elif [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "${{ github.event.action }}"
+            echo "This is a pull request event"
           fi
