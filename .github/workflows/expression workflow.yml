@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: "Check Event Type"
         run: |
-          echo:"the event name is ${{github.event_name}}"
+          echo "the event name is ${{github.event_name}}"
           
           if [ "${{ github.event_name }}" = "push" ]; then
             echo "This is a push event"
