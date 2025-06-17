@@ -6,9 +6,12 @@ on:
         required: true
         default: info
         description: "log levels"
+      tags:
+       description: 'Test scenario tags'  
 jobs:
   manualjob:
     runs-on: ubuntu-latest
     steps:
       - name: "manual workflow"
         run: echo "manual event triggered"
+ 
