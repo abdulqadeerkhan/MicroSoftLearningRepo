@@ -13,5 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "manual workflow"
-        run: echo "manual event triggered"
+        run: |
+           echo "Log Level: ${{ github.event.inputs.logLevel }}"
+           echo "Tags: ${{ github.event.inputs.tags }}"
  
