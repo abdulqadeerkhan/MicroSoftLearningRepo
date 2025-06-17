@@ -13,3 +13,12 @@ jobs:
           elif [ "${{ github.event_name }}" = "pull_request" ]; then
             echo "This is a pull request event"
           fi
+
+      - name: "Check Event Type Dynamically"
+        run: |
+          EVENT_NAME="${{ github.event_name }}"
+          if [ "$EVENT_NAME" = "push" ]; then
+            echo "This is a push event"
+          elif [ "$EVENT_NAME" = "pull_request" ]; then
+            echo "This is a pull request event"
+          fi
