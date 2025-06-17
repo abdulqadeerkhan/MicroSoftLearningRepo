@@ -1,0 +1,16 @@
+name: "Expression work flow"
+on:
+  [push,pull_request]
+
+jobs:
+  checkexpression:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "check expresions"
+      run: |
+        echo: if ["${{github.event.action}}" == "pushed"]; then
+        echo: "${{github.event.action}}"
+        elif ["${{github.event.action}}" =="pull_request"]; then
+        echo "${{github.event.action}}"
+        fi
+      
