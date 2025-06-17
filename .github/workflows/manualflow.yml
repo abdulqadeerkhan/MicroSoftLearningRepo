@@ -8,7 +8,7 @@ on:
         description: "log levels"
 jobs:
   manualjob:
-    runs-on: ubuntu-latest
+    uses: ubuntu-latest
     steps:
       - name: "manual workflow"
         run: echo "manual event triggered"
