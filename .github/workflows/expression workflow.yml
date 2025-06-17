@@ -8,9 +8,9 @@ jobs:
     steps:
     - name: "check expresions"
       run: |
-        echo: if ["${{github.event.action}}" == "pushed"]; then
-        echo: "${{github.event.action}}"
+        if ["${{github.event.action}}" == "push"]; then
+          echo: "${{github.event.action}}"
         elif ["${{github.event.action}}" =="pull_request"]; then
-        echo "${{github.event.action}}"
+          echo "${{github.event.action}}"
         fi
       
