@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: "Check Event Type"
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
+          if ["${{ github.event_name }}" = "push"]; then
             echo "This is a push event"
-          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+          elif ["${{ github.event_name }}" = "pull_request"]; then
             echo "This is a pull request event"
           fi
