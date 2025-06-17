@@ -1,0 +1,10 @@
+name: "Schedule work flow"
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+jobs:
+  schedulejobs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "schedule step1"
+      run: echo "schdeule workflow get triggered"
