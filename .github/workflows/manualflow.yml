@@ -1,0 +1,14 @@
+name: "Manual Work Flow"
+on:
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        required: true
+        default: info
+        description: "log levels"
+jobs:
+  manualjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "manual workflow"
+        run: echo "manual event triggered"
