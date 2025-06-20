@@ -5,6 +5,8 @@ jobs:
     name: Upload  File
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - run: echo "Hello World" > file.txt
       - uses: actions/upload-artifact@main
         with:
