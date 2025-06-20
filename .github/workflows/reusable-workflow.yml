@@ -1,21 +1,26 @@
-name: "reusable workflow"
+# .github/workflows/reusable-workflow.yml
+name: Reusable Node.js Workflow
+
 on:
   workflow_call:
     inputs:
       node-version:
         required: true
         type: string
+
 jobs:
-  reusableworkflow:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkoutcode
-      - uses: actions/checkout@v3
-      - name: node version ${{inputs.node-version}}
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ inputs.node-version }}
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{inputs.node-version}}
+          node-version: ${{ inputs.node-version }}
           cache: 'npm'
+
       - name: Install dependencies
         run: npm ci
 
