@@ -1,7 +1,7 @@
 {
   "name": "my-node-project",
   "version": "1.0.0",
-  "description": "A simple Node.js project for   CI testing buy abdu     l qadeer",
+  "description": "A simple Node.js project for   CI testin  g buy abdu     l qadeer",
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
