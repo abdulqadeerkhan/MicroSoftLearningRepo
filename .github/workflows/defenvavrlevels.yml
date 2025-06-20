@@ -17,5 +17,7 @@ jobs:
         run: echo " $greetings  $name it's $day_of_week today"
         env:
           name: abdul Qadeer
+          day_of_week: monday
+          
         
   
