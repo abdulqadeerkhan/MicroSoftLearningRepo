@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       greetings: hello
+      day_of_week: Sunday
+      
     steps:
       - name: "step level env"
         run: echo " $greetings  $name it's $day_of_week today"
         env:
           name: abdul Qadeer
+        
   
