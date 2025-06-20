@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: artifactfile
           path: public  # Correct path to the directory you want to upload
@@ -23,7 +23,7 @@ jobs:
     needs: uploadartifacts
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@main
         with:
           name: artifactfile
           path: public  # Correct path where you want to download the artifact
