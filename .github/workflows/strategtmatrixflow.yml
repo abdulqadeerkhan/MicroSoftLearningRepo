@@ -1,0 +1,28 @@
+name: "strategy matrix flow"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  teststrategymatrix:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest,window-latest]
+        node-version: [16.x,18.x]
+    steps:
+       - name: step1
+         uses: actions/checkout@v3
+       - name: step2
+         uses: actions/setup-node@v3
+         with:
+           node-version: ${{matrix.node-version}}
+       - name: insatll  and test
+         run: |
+           npm install
+           npm test
+         env:
+           CI: true
+      
+       
+        
