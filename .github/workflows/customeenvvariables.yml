@@ -1,0 +1,13 @@
+name: Custom Envrironment variables
+on:
+  push:
+    branches:
+      - main
+jobs:
+  customevaraibles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set custom variable
+        run: echo "github_action=yellow">> "$GITHUB_ENV"
+      - name: access custoem variable
+        run: echo "$github_action"
