@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: List files in public directory
+        run: ls -la public  # This will show the contents of the public directory
       - run: echo "Hello World" > file.txt
       - uses: actions/upload-artifact@main
         with:
