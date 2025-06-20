@@ -1,0 +1,29 @@
+name: Upload and Download Artifacts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  uploadartifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifactfile
+          path: public  # Correct path to the directory you want to upload
+
+  downloadartifacts:
+    runs-on: ubuntu-latest
+    needs: uploadartifacts
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifactfile
+          path: public  # Correct path where you want to download the artifact
