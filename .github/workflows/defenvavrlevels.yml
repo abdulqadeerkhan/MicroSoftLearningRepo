@@ -7,7 +7,7 @@ env:
   day_of_week: Friday
 jobs:
   joblevelenv:
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     env:
       greetings: hello
     steps:
