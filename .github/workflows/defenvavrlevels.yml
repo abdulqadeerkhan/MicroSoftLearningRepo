@@ -1,0 +1,18 @@
+name: Def variable at diff levels in workflow
+on:
+  push:
+    branches:
+      - main
+env:
+  day_of_week: Friday
+jobs:
+  joblevelenv:
+    runs-on: ubunto-latest
+    env:
+      greetings: hello
+    steps:
+      - name: "step level env"
+        run: echo " $greetings $name it's $day_of_week today"
+        env:
+          name: abdul Qadeer
+  
