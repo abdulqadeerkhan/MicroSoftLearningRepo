@@ -23,4 +23,5 @@ jobs:
       - uses: actions/download-artifact@main
         with:
           name: file
+          path: public/file.txt
       - run: cat public/file.txt
