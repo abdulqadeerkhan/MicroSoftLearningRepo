@@ -2,7 +2,7 @@ name: Share data between jobs
 on: push
 jobs:
   job_1:
-    name: Upload File
+    name: Upload  File
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World" > file.txt
