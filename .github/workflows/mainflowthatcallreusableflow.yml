@@ -1,11 +1,12 @@
-name: "Main Workflow (this will call reusable workflow"
+name: "Main Workflow (this will call reusable workflow)"
+
 on:
   push:
     branches:
       - main
+
 jobs:
   call-reusable-workflow:
     uses: ./.github/workflows/reusable-workflow.yml
     with:
       node-version: '16.x'  # Specify the Node.js version you want to use
-  
