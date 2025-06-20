@@ -11,4 +11,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3  # Checkout the repository code
       - name: step1
-        run: npm install bats
+        run: npm install bats  
+        # Global Installation (npm install -g bats): Makes the package available system-wide, allowing you to use it from any location in your terminal.
+ # Local Installation (npm install <package>): Installs the package within a specific project, making it available only in that project.
