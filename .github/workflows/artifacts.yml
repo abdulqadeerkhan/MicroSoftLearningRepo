@@ -15,8 +15,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
-          name: artifactfile
-          path: public  # Correct path to the directory you want to upload
+          name: artifactfile1
+          path: public/  # Correct path to the directory you want to upload
 
   downloadartifacts:
     runs-on: ubuntu-latest
@@ -25,5 +25,5 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@main
         with:
-          name: artifactfile
+          name: artifactfile1
           path: public  # Correct path where you want to download the artifact
