@@ -37,6 +37,6 @@ jobs:
           distribution: 'adopt'
 
       - name: Publish to Maven Repository
-        run: mvn deploy --settings /home/runner/work/MicroSoftLearningRepo/MicroSoftLearningRepo/.github/settings.xml
+        run: mvn deploy --settings settings.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
