@@ -20,7 +20,7 @@ jobs:
 
       - name: Commit and push my_file.txt to the repository
         run: |
-          git config --local user.email "imabdulqadeer.com"
+          git config --local user.email "imabdulqadeer@gmail.com"
           git config --local user.name "abdul qadeer"
           git add my_file.txt
           git commit -m "Add my_file.txt"
