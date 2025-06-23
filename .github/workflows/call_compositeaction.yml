@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step1
-        uses: ./.github/my-actions/compositeaction1.yml
+        uses: ./.github/my-actions/action.yml
         with:
           node-version: '18'
   
