@@ -19,12 +19,14 @@ jobs:
         run: ls -la
 
       - name: Commit and push my_file.txt to the repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
           git config --local user.email "imabdulqadeer@gmail.com"
-          git config --local user.name "abdul qadeer"
+          git config --local user.name "Abdul Qadeer"
           git add my_file.txt
           git commit -m "Add my_file.txt"
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/abdulqadeerkhan/MicroSoftLearningRepo.git HEAD:main
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
