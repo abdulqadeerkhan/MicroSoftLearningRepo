@@ -1,0 +1,15 @@
+name: "retention_period_for_artifacts"
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  retentionperiod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: my_file.txt
+          retention-days: 10
