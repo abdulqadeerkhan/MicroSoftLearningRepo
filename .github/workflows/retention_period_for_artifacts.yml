@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step1
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: artifacts
           path: my_file.txt
