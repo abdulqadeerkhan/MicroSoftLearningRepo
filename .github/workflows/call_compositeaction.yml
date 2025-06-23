@@ -1,4 +1,4 @@
-name: "call composite action"
+name: "call compositeaction"
 
 on:
   push:
