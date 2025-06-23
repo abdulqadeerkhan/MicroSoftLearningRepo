@@ -17,7 +17,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
-          name: artifactfile3
+          name: artifactfile4
           path: public  # Correct path to the directory you want to upload
 
   downloadartifacts:
@@ -27,5 +27,5 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@main
         with:
-          name: artifactfile3
+          name: artifactfile4
           path: public  # Correct path where you want to download the artifact
