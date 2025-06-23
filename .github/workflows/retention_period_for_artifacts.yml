@@ -14,9 +14,14 @@ jobs:
 
       - name: List files in the current directory
         run: ls -la
-      - name: step1
+      - name: uploadfile
         uses: actions/upload-artifact@main
         with:
           name: artifacts
           path: my_file.txt
           retention-days: 10
+      - name: downloadfile
+        uses: actions/download-artifact@main
+        with:
+          name: artifacts
+          path: my_file.txt
