@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Create my_file.txt (for demonstration)
+        run: echo "This is a test file." > my_file.txt
+
+      - name: List files in the current directory
+        run: ls -la
       - name: step1
         uses: actions/upload-artifact@main
         with:
