@@ -13,7 +13,7 @@ jobs:
       - name: List files in my_actions
         run: ls -la .github/my_actions/
       - name: calling action
-        uses: ./.github/my_actions/
+        uses: ./github/my_actions/
         with:
           node-version: '18'
   
