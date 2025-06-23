@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step1
-        uses: ./github/my-actions
+        uses: ./github/my_actions
         with:
           node-version: '18'
   
