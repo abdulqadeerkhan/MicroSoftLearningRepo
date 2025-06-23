@@ -1,0 +1,46 @@
+name: "upload file to repo"
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  retentionperiod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create my_file.txt (for demonstration)
+        run: echo "This is a test file." > my_file.txt
+
+      - name: List files in the current directory
+        run: ls -la
+
+      - name: Commit and push my_file.txt to the repository
+        run: |
+          git config --local user.email "imabdulqadeer.com"
+          git config --local user.name "abdul qadeer"
+          git add my_file.txt
+          git commit -m "Add my_file.txt"
+          git push
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: artifacts
+          path: my_file.txt
+          retention-days: 10
+
+  download:
+    runs-on: ubuntu-latest
+    needs: retentionperiod  # Ensure this job runs after the upload job
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@main
+        with:
+          name: artifacts
+
+      - name: List downloaded files
+        run: ls -la
