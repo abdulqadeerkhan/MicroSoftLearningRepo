@@ -1,0 +1,15 @@
+name: "call composite action"
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  callingcompossiteaction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        uses: ./.github/my-actions/compositeaction1
+        with:
+          node-version: '18'
+  
